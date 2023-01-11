@@ -1,13 +1,5 @@
 import React from 'react';
-import {
-  NativeBaseProvider,
-  Box,
-  Text,
-  Icon,
-  HStack,
-  Center,
-  Pressable
-} from 'native-base';
+import { Box, Text, Icon, HStack, Center, Pressable } from 'native-base';
 import { MaterialCommunityIcons, MaterialIcons } from '@expo/vector-icons';
 
 export function Footer() {
