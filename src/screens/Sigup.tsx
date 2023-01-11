@@ -22,7 +22,7 @@ export function Signup() {
   }
 
   return (
-    <VStack bgColor={'gray.100'} flex={1} px={10}>
+    <VStack flex={1} px={10}>
       <Center>
         <Heading fontSize={'xl'} my={8}>
           Crie sua conta

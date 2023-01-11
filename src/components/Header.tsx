@@ -3,16 +3,16 @@ import { Box, Text, HStack, Center } from 'native-base';
 
 export function Header() {
   return (
-    <Box flex={1} bg="white" safeAreaTop w="full" h="full" alignSelf="center">
+    <Box bg="white" safeAreaTop w="full" alignSelf="center">
       <HStack
         bg="indigo.600"
         alignItems="center"
         safeAreaBottom
         shadow={6}
-        h="full"
+        h="60px"
       >
         <Center w={'full'}>
-          <Text color="white" fontSize="18" bold>
+          <Text color="white" fontSize="18">
             Home
           </Text>
         </Center>
