@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'native-base';
+import { Center, View } from 'native-base';
 
 import { Button } from '../components/Button';
 import { useNavigation } from '@react-navigation/native';
@@ -12,8 +12,10 @@ export function Account() {
   }
 
   return (
-    <View bgColor="green.700" h="full" w="full">
-      <Button title="Home" onPress={openScreenHome} />
+    <View bgColor="blue.700" h="full" w="full">
+      <Center m="16px">
+        <Button title="Home" onPress={openScreenHome} />
+      </Center>
     </View>
   );
 }

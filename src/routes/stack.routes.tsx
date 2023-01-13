@@ -8,9 +8,13 @@ const { Screen, Navigator } = createNativeStackNavigator();
 
 export function StackRoutes() {
   return (
-    <Navigator>
-      <Screen name="home" component={Home}></Screen>
-      <Screen name="account" component={Account}></Screen>
+    <Navigator screenOptions={{ headerTitleAlign: 'center' }}>
+      <Screen name="home" component={Home} options={{ title: 'Home' }}></Screen>
+      <Screen
+        name="account"
+        component={Account}
+        options={{ title: 'Account' }}
+      ></Screen>
     </Navigator>
   );
 }
