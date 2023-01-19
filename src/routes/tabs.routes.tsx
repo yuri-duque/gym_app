@@ -13,7 +13,12 @@ export function TabRoutes() {
     <Navigator
       screenOptions={{
         headerTitleAlign: 'center',
-        tabBarLabelStyle: { marginBottom: '6px', fontWeight: '600' }
+        tabBarLabelStyle: {
+          marginBottom: '4px',
+          fontWeight: '600'
+        },
+        tabBarIconStyle: { marginTop: '6px' },
+        headerStyle: { height: '48px' }
       }}
       initialRouteName="workout"
     >
