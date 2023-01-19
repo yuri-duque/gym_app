@@ -4,6 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 import { Account } from '../screens/Account';
 import { Home } from '../screens/Home';
+import { WorkoutList } from '../screens/Workout/WorkoutList';
 
 const { Screen, Navigator } = createBottomTabNavigator();
 
@@ -14,6 +15,7 @@ export function TabRoutes() {
         headerTitleAlign: 'center',
         tabBarLabelStyle: { marginBottom: '6px', fontWeight: '600' }
       }}
+      initialRouteName="workout"
     >
       <Screen
         name="home"
@@ -28,7 +30,7 @@ export function TabRoutes() {
       ></Screen>
       <Screen
         name="workout"
-        component={Home}
+        component={WorkoutList}
         options={{
           title: 'Workout',
           tabBarLabel: 'Workout',
