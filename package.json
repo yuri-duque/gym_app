@@ -1,6 +1,6 @@
 {
   "name": "react_native_ts_graphql_crud",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -14,7 +14,7 @@
     "@react-navigation/bottom-tabs": "^6.5.3",
     "@react-navigation/native": "^6.1.2",
     "@react-navigation/native-stack": "^6.9.8",
-    "expo": "~47.0.12",
+    "expo": "^47.0.13",
     "expo-status-bar": "~1.4.2",
     "expo-updates": "~0.15.6",
     "formik": "^2.2.9",
