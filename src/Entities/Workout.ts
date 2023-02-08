@@ -1,4 +1,5 @@
 type Workout = {
+  id: string;
   name: string;
   typeReps: 'repetições' | 'repetições + maximo' | 'isometria' | 'tempo';
   sets?: number;

@@ -12,7 +12,7 @@ export function Button({ title, full, width, bg, ...rest }: Props) {
   return (
     <NBButton
       w={width ? width : full ? 'full' : 'container'}
-      h={16}
+      h={'40px'}
       bg={bg || 'green.600'}
       _pressed={{ bgColor: 'green.700' }}
       {...rest}

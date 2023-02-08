@@ -1,7 +1,8 @@
 {
   "expo": {
-    "name": "react_native_ts_graphql_crud",
-    "slug": "react_native_ts_graphql_crud",
+    "name": "gymapp",
+    "slug": "gymapp",
+    "schema": "gymapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,9 +15,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
