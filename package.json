@@ -16,6 +16,7 @@
     "@react-navigation/native-stack": "^6.9.8",
     "expo": "~47.0.12",
     "expo-status-bar": "~1.4.2",
+    "expo-updates": "~0.15.6",
     "formik": "^2.2.9",
     "native-base": "^3.4.25",
     "prettier": "^2.8.2",
