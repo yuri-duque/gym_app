@@ -1,9 +1,13 @@
-name: update expo project
-on: push
+name: update
+
+on:
+  push:
+    branches:
+      - release
 
 jobs:
-  Update:
-    name: EAS Update
+  build:
+    name: EAS Build
     runs-on: ubuntu-latest
     steps:
       - name: Check for EXPO_TOKEN
@@ -43,33 +47,5 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Publish update
-        run: eas update --auto
-
-  Build-for-android:
-    runs-on: macos-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-
-      - uses: actions/setup-java@v1.4.3
-        with:
-          java-version: '9.0.4' # The JDK version to make available on the path.
-          java-package: jdk # (jre, jdk, or jdk+fx) - defaults to jdk
-          architecture: x64 # (x64 or x86) - defaults to x64
-
-      - name: Setup Expo
-        uses: expo/expo-github-action@v7
-        with:
-          expo-version: latest
-          eas-version: latest
-          token: ${{ secrets.EXPO_TOKEN }}
-
-      - name: Install deps
-        run: yarn install
-
-      - name: Build Android APK Bundle
-        run: expo build:android
+      - name: Build
+        run: eas build -p android --profile preview
