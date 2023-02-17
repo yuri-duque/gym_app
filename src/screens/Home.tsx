@@ -3,6 +3,7 @@ import { Center, View } from 'native-base';
 
 import { Button } from '../components/Button';
 import { useNavigation } from '@react-navigation/native';
+import { WorkoutList } from './Workout/WorkoutList';
 
 export function Home() {
   const navigation = useNavigation();

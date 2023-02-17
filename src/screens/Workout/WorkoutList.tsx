@@ -5,16 +5,20 @@ import { Button } from '../../components/Button';
 
 export function WorkoutList() {
   const [workouts, setWorkouts] = useState<Array<Workouts>>([
-    { name: 'A', workouts: baseWorkoutA },
-    { name: 'B', workouts: baseWorkoutB },
-    { name: 'C', workouts: baseWorkoutC }
+    { id: 1, name: 'A', workouts: baseWorkoutA },
+    { id: 2, name: 'B', workouts: baseWorkoutB },
+    { id: 3, name: 'C', workouts: baseWorkoutC }
   ]);
-  const [workoutSelected, setWorkoutSelected] = useState<Array<Workout>>(
+  const [workoutSelected, setWorkoutSelected] = useState<number>(
+    workouts[0].id
+  );
+  const [workoutsShowed, setWorkoutsShowed] = useState<Array<Workout>>(
     workouts[0].workouts
   );
 
-  const hancleChange = (workout: Array<Workout>) => {
-    setWorkoutSelected(workout);
+  const hancleChange = (workout: Workouts) => {
+    setWorkoutSelected(workout.id);
+    setWorkoutsShowed(workout.workouts);
   };
 
   return (
@@ -26,13 +30,15 @@ export function WorkoutList() {
               <Button
                 key={index}
                 title={workout.name}
-                onPress={() => hancleChange(workout.workouts)}
+                onPress={() => hancleChange(workout)}
+                isPressed={workoutSelected === workout.id}
                 width="30%"
-                bg="blue.500"
+                bg="blue.400"
+                _pressed={{ bgColor: 'blue.700' }}
               />
             ))}
           </HStack>
-          {workoutSelected.map((workout, index) => (
+          {workoutsShowed.map((workout, index) => (
             <HStack justifyContent="space-between" key={index}>
               <WorkoutCard workout={workout} />
             </HStack>
