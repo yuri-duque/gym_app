@@ -40,7 +40,7 @@ export function WorkoutList() {
           </HStack>
           {workoutsShowed.map((workout, index) => (
             <HStack justifyContent="space-between" key={index}>
-              <WorkoutCard workout={workout} />
+              <WorkoutCard workout={workout} key={index} />
             </HStack>
           ))}
         </VStack>
@@ -51,6 +51,7 @@ export function WorkoutList() {
 
 const baseWorkoutA: Array<Workout> = [
   {
+    id: '1',
     name: 'Esteira',
     typeReps: 'tempo',
     typeTime: 'minutos',
@@ -58,6 +59,7 @@ const baseWorkoutA: Array<Workout> = [
     gifName: 'esteira'
   },
   {
+    id: '2',
     name: 'Supino reto',
     typeReps: 'repetições',
     sets: 3,
@@ -69,7 +71,8 @@ const baseWorkoutA: Array<Workout> = [
     gifName: 'supino-reto-aparelho'
   },
   {
-    name: 'Esteira',
+    id: '3',
+    name: 'Supino inclinado',
     typeReps: 'repetições',
     sets: 3,
     reps: [15, 12, 10],
@@ -83,6 +86,7 @@ const baseWorkoutA: Array<Workout> = [
 
 const baseWorkoutB: Array<Workout> = [
   {
+    id: '4',
     name: 'Supino reto',
     typeReps: 'repetições',
     sets: 3,
@@ -94,7 +98,8 @@ const baseWorkoutB: Array<Workout> = [
     gifName: 'supino-reto-aparelho'
   },
   {
-    name: 'Esteira',
+    id: '5',
+    name: 'Supino inclinado',
     typeReps: 'repetições',
     sets: 3,
     reps: [15, 12, 10],
@@ -108,7 +113,8 @@ const baseWorkoutB: Array<Workout> = [
 
 const baseWorkoutC: Array<Workout> = [
   {
-    name: 'Esteira',
+    id: '6',
+    name: 'Supino inclinado',
     typeReps: 'repetições',
     sets: 3,
     reps: [15, 12, 10],
