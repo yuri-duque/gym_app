@@ -31,13 +31,17 @@ export function WorkoutCard({ workout }: WorkoutCardProps) {
               {workout.name}
             </Heading>
           </Stack>
-          {workout.gifName && <WorkoutGif gifName={workout.gifName} />}
+
+          {workout.gifName && (
+            <WorkoutGif id={workout.id} gifName={workout.gifName} />
+          )}
 
           <Flex
             direction="row"
             flexWrap={'wrap'}
-            justifyContent="space-between"
-            m="8px"
+            justifyContent={
+              workout.time && !workout.sets ? 'center' : 'space-between'
+            }
           >
             {workout.sets && (
               <WorkoutCardNumber
